@@ -23,7 +23,7 @@ function checkMob(){
 function checkLand(){
   var landnumm = document.getElementById("Landnum").value;
 
-  if (landnumm.length == 10) {
+  if (landnumm.length == 11) {
     checkemail();
   } else {
     alert("Please enter a valid, 10 digit landline number.");
