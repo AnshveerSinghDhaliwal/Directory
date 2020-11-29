@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+<link rel="stylesheet" href="Teachers_communication_directory_CSS.css">
+
+</head>
+
+<body>
+
+<div style="margin: auto;
+  width: 40%;">
+	<input type="text" id="search_field_input" value="" placeholder="Type name or number" oninput="search_table()">
+	<button id="btn" onclick="search_table()">Search</button>
+</div>
+
+<table border="1" id="myTable" style="margin: auto; width: 90%;">
+	<th width="25%">Name</th>
+	<th width="20%">Mobile</th>
+	<th width="20%">Landline</th>
+	<th width="25%">Email</th>
+  <th colspan="2" id="editortools">Editor tools</th>
+</table>
+
+
+<br><br>
+
+<div id="adminview">
+  <input type="text" id="Named" placeholder="Enter the name"><br>
+	<input type="text" id="Mobnum" placeholder="Enter the mobile number"><br>
+	<input type="text" id="Landnum" placeholder="Enter the landline number"><br>
+	<input type="text" id="Emailid" placeholder="Enter the email"><br> 
+	<button type="submit" id="insertbtn" onclick="checkMob()">Insert the data</button><br>
+  <button type="button" id="editbtn" onclick="checkMobs()" style="display: none;">Save the changes</button><br>
+</div>
+
+<p id="adminask">Admin? <button onclick="document.getElementById('id01').style.display = 'block'">Click here to Login</button></p>
+<p id="logoutask"  style="display: none;"><button onclick="logoutfunc()">Log Out</button></p>
+
+<div id="id01" class="modal">
+  <span onclick="document.getElementById('id01').style.display='none'" class="close" title="Close Modal">&times;</span>
+  <div class="modal-content">
+    <div class="container">
+      <h1>Admin Login</h1>
+      <hr>
+      <label><b>Username</b></label>
+      <input type="text" placeholder="Enter Username" id="Username" required>
+        <br>
+      <label><b>Password</b></label>
+      <input type="password" placeholder="Enter Password" id="psw" required>
+      <br><br>
+      <p id="success"></p>
+      <div class="clearfix">
+        <button onclick="checkadmin()" class="loginbtn">Log in</button><br><br>
+        
+      </div>
+    </div>
+  </div>
+</div>
+  
+<script src="Teachers_communication_directory_javascript.js"></script>
+
+</body>
+</html>
